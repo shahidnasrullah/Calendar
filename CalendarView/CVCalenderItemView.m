@@ -9,6 +9,7 @@
 #import "CVCalenderItemView.h"
 
 @implementation CVCalenderItemView
+@synthesize currentDate;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -33,9 +34,9 @@
     } completion:^(BOOL finished) {
         [self setAlpha:1];
     }];
-    if([self.delegate respondsToSelector:@selector(CVCalenderItemViewDidClicked:withTag:)])
+    if([self.delegate respondsToSelector:@selector(CVCalenderItemView:didClickedOnGesture:withTag:withDate: )])
     {
-        [self.delegate CVCalenderItemViewDidClicked:recognizer withTag:self.tag];
+        [self.delegate CVCalenderItemView:self didClickedOnGesture:recognizer withTag:self.tag withDate:currentDate];
     }
 }
 

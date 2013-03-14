@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CVCalendarWeekView.h"
 
-@interface NextViewController : UIViewController
+@interface MainViewController : UIViewController
 {
     CVCalendarWeekView * weekView;
 }

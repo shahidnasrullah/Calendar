@@ -32,8 +32,29 @@
 -(NSString*) getMonthName
 {
     NSDateFormatter * form = [[NSDateFormatter alloc] init];
-    [form setDateFormat:@"MMMM"];
+    [form setDateFormat:@"MMM"];
     NSString * monthName = [form stringFromDate: [cal dateFromComponents:components]];
+    
+    return monthName;
+}
+
+-(NSString*) getNextMonthName:(NSDate*) date
+{
+    NSDateFormatter * form = [[NSDateFormatter alloc] init];
+    [form setDateFormat:@"MMM"];
+    NSDateComponents * dateComponents;
+    dateComponents = [cal components:( NSYearCalendarUnit | NSMonthCalendarUnit | NSWeekCalendarUnit | NSWeekdayCalendarUnit| NSDayCalendarUnit ) fromDate:date];
+    [dateComponents setDay:1];
+    if([dateComponents month] +1>12){
+        [dateComponents setMonth:1];
+        [dateComponents setYear:[dateComponents year]+1];
+    }
+    else
+    {
+        [dateComponents setMonth:[dateComponents month]+1];
+    }
+    NSDate * newDate = [cal dateFromComponents:dateComponents];
+    NSString * monthName = [form stringFromDate: newDate];
     
     return monthName;
 }
@@ -122,6 +143,10 @@
             dayIncrement = 0;
             currentDayToShow = 1;
             
+            NSDate * currentdate = [cal dateFromComponents:components];
+            NSString * nextMonthName = [self getNextMonthName:currentdate];
+            //NSLog(@"Next Month Name: %@", nextMonthName);
+            monthName = [monthName stringByAppendingFormat:@"/%@",nextMonthName];
         }
         item.lbl_date.text = [NSString stringWithFormat:@"%d",currentDayToShow + dayIncrement++];
         
@@ -202,18 +227,9 @@
 }
 
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
-
 #pragma mark - CVCalenderItemView Delegate
 
--(void)CVCalenderItemViewDidClicked:(UITapGestureRecognizer *)recognizer withTag:(NSInteger)tag
+-(void)CVCalenderItemView:(CVCalenderItemView *)itemView didClickedOnGesture:(UITapGestureRecognizer *)recognizer withTag:(NSInteger)tag withDate:(NSDate *)date
 {
     UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:[NSString stringWithFormat: @"Item Clicked with tag : %d", tag ] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];

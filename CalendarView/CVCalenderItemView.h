@@ -8,17 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol CVCalenderItemViewDelegate <NSObject>
 
-- (void)CVCalenderItemViewDidClicked:(UITapGestureRecognizer *)recognizer withTag:(NSInteger) tag;
 
-@end
+@interface CVCalenderItemView : UIView
 
-@interface CVCalenderItemView : UIView 
 @property (weak, nonatomic) IBOutlet UILabel *lbl_date;
 @property (weak, nonatomic) IBOutlet UIImageView *pic_smiley;
 @property (nonatomic, retain) id delegate;
+@property (nonatomic, retain) NSDate * currentDate;
 
 -(void) addTapGestureRecognizer;
+
+@end
+/*
+ Delegate for item clicked
+ */
+
+@protocol CVCalenderItemViewDelegate <NSObject>
+
+- (void)CVCalenderItemView:(CVCalenderItemView*)itemView didClickedOnGesture:(UITapGestureRecognizer *)recognizer withTag:(NSInteger) tag withDate:(NSDate*) date;
 
 @end

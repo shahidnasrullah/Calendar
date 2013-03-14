@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "CVCalenderView.h"
-#import "NextViewController.h"
+#import "MainViewController.h"
 
-@interface ViewController : UIViewController
+@interface CalendarViewController : UIViewController
 {
     CVCalenderView * calenderView;
 }

@@ -68,6 +68,14 @@
     return monthName;
 }
 
+-(NSDate*) getCurrentDate:(NSDate*)date forDay:(NSInteger) day
+{
+    NSDateComponents * dateComponents = [cal components:( NSYearCalendarUnit | NSMonthCalendarUnit | NSWeekCalendarUnit | NSWeekdayCalendarUnit| NSDayCalendarUnit ) fromDate:date];
+    [dateComponents setDay:day];
+    [dateComponents setHour:1];
+    return [cal dateFromComponents:dateComponents];
+}
+
 
 -(void) createCalenderViewItems:(NSDate *) date
 {
@@ -127,8 +135,14 @@
         
         
         item.lbl_date.text = [NSString stringWithFormat:@"%d",i+1];
+        item.pic_smiley.image =  [UIImage imageNamed:@"images.jpeg"];
         [item addTapGestureRecognizer];
+        NSDate * tempDate = [cal dateFromComponents:components];
+        NSDate * dateForCurrentItem = [self getCurrentDate: tempDate forDay:i+1];
         [item setTag:i+1];
+        //NSLog(@"Date for current Item: %@", dateForCurrentItem);
+        item.currentDate = dateForCurrentItem;
+        
         
         xOffsetForword += item.frame.size.width;
         if (xOffsetForword>=320) {
@@ -209,10 +223,11 @@
 
 #pragma mark CVCalenderItemView Delegate
 
--(void)CVCalenderItemViewDidClicked:(UITapGestureRecognizer *)recognizer withTag:(NSInteger)tag
+-(void)CVCalenderItemView:(CVCalenderItemView *)itemView didClickedOnGesture:(UITapGestureRecognizer *)recognizer withTag:(NSInteger)tag withDate:(NSDate *)date
 {
-    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Title" message:[NSString stringWithFormat: @"Item Clicked with tag : %d", tag] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Title" message:[NSString stringWithFormat: @"Item Clicked with tag : %d with Date: %@", tag, date] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];
+    itemView.pic_smiley.image = [UIImage imageNamed:@"Default.png"];
 }
 
 @end

@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F873BB1A16EF7CF9006F9879 /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F873BB1816EF7CF9006F9879 /* NextViewController.m */; };
-		F873BB1B16EF7CF9006F9879 /* NextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F873BB1916EF7CF9006F9879 /* NextViewController.xib */; };
+		F873BB1A16EF7CF9006F9879 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F873BB1816EF7CF9006F9879 /* MainViewController.m */; };
+		F873BB1B16EF7CF9006F9879 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F873BB1916EF7CF9006F9879 /* MainViewController.xib */; };
 		F87F18E716F059B400834748 /* CVCalendarWeekView.m in Sources */ = {isa = PBXBuildFile; fileRef = F87F18E616F059B400834748 /* CVCalendarWeekView.m */; };
 		F87F18EC16F0722600834748 /* CVCalendarWeekView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F87F18EB16F0722600834748 /* CVCalendarWeekView.xib */; };
 		F8D8399C16EDC9E8000FE178 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8D8399B16EDC9E8000FE178 /* UIKit.framework */; };
@@ -20,8 +20,8 @@
 		F8D839AE16EDC9E8000FE178 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F8D839AD16EDC9E8000FE178 /* Default.png */; };
 		F8D839B016EDC9E8000FE178 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8D839AF16EDC9E8000FE178 /* Default@2x.png */; };
 		F8D839B216EDC9E8000FE178 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8D839B116EDC9E8000FE178 /* Default-568h@2x.png */; };
-		F8D839B516EDC9E8000FE178 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D839B416EDC9E8000FE178 /* ViewController.m */; };
-		F8D839B816EDC9E8000FE178 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8D839B616EDC9E8000FE178 /* ViewController.xib */; };
+		F8D839B516EDC9E8000FE178 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D839B416EDC9E8000FE178 /* CalendarViewController.m */; };
+		F8D839B816EDC9E8000FE178 /* CalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8D839B616EDC9E8000FE178 /* CalendarViewController.xib */; };
 		F8D839C116EDCA71000FE178 /* CVCalenderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D839C016EDCA71000FE178 /* CVCalenderView.m */; };
 		F8D839C416EDCABA000FE178 /* CVCalenderItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D839C316EDCABA000FE178 /* CVCalenderItemView.m */; };
 		F8D839C616EDCADB000FE178 /* CVCalenderItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8D839C516EDCADB000FE178 /* CVCalenderItem.xib */; };
@@ -35,9 +35,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F873BB1716EF7CF9006F9879 /* NextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
-		F873BB1816EF7CF9006F9879 /* NextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
-		F873BB1916EF7CF9006F9879 /* NextViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NextViewController.xib; sourceTree = "<group>"; };
+		F873BB1716EF7CF9006F9879 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		F873BB1816EF7CF9006F9879 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		F873BB1916EF7CF9006F9879 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		F87F18E516F059B400834748 /* CVCalendarWeekView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVCalendarWeekView.h; sourceTree = "<group>"; };
 		F87F18E616F059B400834748 /* CVCalendarWeekView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVCalendarWeekView.m; sourceTree = "<group>"; };
 		F87F18EB16F0722600834748 /* CVCalendarWeekView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CVCalendarWeekView.xib; sourceTree = "<group>"; };
@@ -54,9 +54,9 @@
 		F8D839AD16EDC9E8000FE178 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		F8D839AF16EDC9E8000FE178 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		F8D839B116EDC9E8000FE178 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		F8D839B316EDC9E8000FE178 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F8D839B416EDC9E8000FE178 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		F8D839B716EDC9E8000FE178 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		F8D839B316EDC9E8000FE178 /* CalendarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
+		F8D839B416EDC9E8000FE178 /* CalendarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		F8D839B716EDC9E8000FE178 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CalendarViewController.xib; sourceTree = "<group>"; };
 		F8D839BF16EDCA71000FE178 /* CVCalenderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVCalenderView.h; sourceTree = "<group>"; };
 		F8D839C016EDCA71000FE178 /* CVCalenderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVCalenderView.m; sourceTree = "<group>"; };
 		F8D839C216EDCABA000FE178 /* CVCalenderItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVCalenderItemView.h; sourceTree = "<group>"; };
@@ -91,9 +91,9 @@
 		F873BB1416EF7CBC006F9879 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				F8D839B316EDC9E8000FE178 /* ViewController.h */,
-				F8D839B416EDC9E8000FE178 /* ViewController.m */,
-				F8D839B616EDC9E8000FE178 /* ViewController.xib */,
+				F8D839B316EDC9E8000FE178 /* CalendarViewController.h */,
+				F8D839B416EDC9E8000FE178 /* CalendarViewController.m */,
+				F8D839B616EDC9E8000FE178 /* CalendarViewController.xib */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -101,9 +101,9 @@
 		F873BB1616EF7CD2006F9879 /* Next */ = {
 			isa = PBXGroup;
 			children = (
-				F873BB1716EF7CF9006F9879 /* NextViewController.h */,
-				F873BB1816EF7CF9006F9879 /* NextViewController.m */,
-				F873BB1916EF7CF9006F9879 /* NextViewController.xib */,
+				F873BB1716EF7CF9006F9879 /* MainViewController.h */,
+				F873BB1816EF7CF9006F9879 /* MainViewController.m */,
+				F873BB1916EF7CF9006F9879 /* MainViewController.xib */,
 			);
 			name = Next;
 			sourceTree = "<group>";
@@ -258,13 +258,13 @@
 				F8D839AE16EDC9E8000FE178 /* Default.png in Resources */,
 				F8D839B016EDC9E8000FE178 /* Default@2x.png in Resources */,
 				F8D839B216EDC9E8000FE178 /* Default-568h@2x.png in Resources */,
-				F8D839B816EDC9E8000FE178 /* ViewController.xib in Resources */,
+				F8D839B816EDC9E8000FE178 /* CalendarViewController.xib in Resources */,
 				F8D839C616EDCADB000FE178 /* CVCalenderItem.xib in Resources */,
 				F8D839CE16EDE1BD000FE178 /* CVTitleView.xib in Resources */,
 				F8F4536716EF403D004FC567 /* images.jpeg in Resources */,
 				F8F4536A16EF450C004FC567 /* left_arrow.png in Resources */,
 				F8F4536C16EF4513004FC567 /* right_arrow.png in Resources */,
-				F873BB1B16EF7CF9006F9879 /* NextViewController.xib in Resources */,
+				F873BB1B16EF7CF9006F9879 /* MainViewController.xib in Resources */,
 				F87F18EC16F0722600834748 /* CVCalendarWeekView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,13 +278,13 @@
 			files = (
 				F8D839A816EDC9E8000FE178 /* main.m in Sources */,
 				F8D839AC16EDC9E8000FE178 /* AppDelegate.m in Sources */,
-				F8D839B516EDC9E8000FE178 /* ViewController.m in Sources */,
+				F8D839B516EDC9E8000FE178 /* CalendarViewController.m in Sources */,
 				F8D839C116EDCA71000FE178 /* CVCalenderView.m in Sources */,
 				F8D839C416EDCABA000FE178 /* CVCalenderItemView.m in Sources */,
 				F8D839C916EDCCFD000FE178 /* CVTitleView.m in Sources */,
 				F8D839CC16EDD056000FE178 /* CVDaysView.m in Sources */,
 				F8EDCD3B16EDFB4900087164 /* AppConstants.m in Sources */,
-				F873BB1A16EF7CF9006F9879 /* NextViewController.m in Sources */,
+				F873BB1A16EF7CF9006F9879 /* MainViewController.m in Sources */,
 				F87F18E716F059B400834748 /* CVCalendarWeekView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,12 +300,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		F8D839B616EDC9E8000FE178 /* ViewController.xib */ = {
+		F8D839B616EDC9E8000FE178 /* CalendarViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F8D839B716EDC9E8000FE178 /* en */,
 			);
-			name = ViewController.xib;
+			name = CalendarViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

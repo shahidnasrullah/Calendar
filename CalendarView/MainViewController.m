@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 coeus. All rights reserved.
 //
 
-#import "NextViewController.h"
+#import "MainViewController.h"
 
-@interface NextViewController ()
+@interface MainViewController ()
 
 @end
 
-@implementation NextViewController
+@implementation MainViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

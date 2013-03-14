@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 coeus. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "CalendarViewController.h"
 
-@interface ViewController ()
+@interface CalendarViewController ()
 
 @end
 
-@implementation ViewController
+@implementation CalendarViewController
 
 - (void)viewDidLoad
 {
@@ -32,8 +32,8 @@
 
 -(void)rightBarButtonItemClickecd:(id)sender
 {
-    NextViewController * nextViewController = [[NextViewController alloc] init];
-    [self.navigationController pushViewController:nextViewController animated:YES];
+    MainViewController * mainViewController = [[MainViewController alloc] init];
+    [self.navigationController pushViewController:mainViewController animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
