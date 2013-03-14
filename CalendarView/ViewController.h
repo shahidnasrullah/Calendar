@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CVCalenderView.h"
+#import "NextViewController.h"
 
 @interface ViewController : UIViewController
+{
+    CVCalenderView * calenderView;
+}
+
+-(IBAction)rightBarButtonItemClickecd :(id)sender;
 
 @end
