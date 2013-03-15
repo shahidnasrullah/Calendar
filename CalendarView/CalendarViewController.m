@@ -20,20 +20,8 @@
     self.title = @"Calendar";
     calenderView = [[CVCalenderView alloc] initWithFrame:self.view.frame];
     [self.view addSubview:calenderView];
-    [self addRightNavButton];
+
 	// Do any additional setup after loading the view, typically from a nib.
-}
-
--(void) addRightNavButton
-{
-    UIBarButtonItem * rightButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(rightBarButtonItemClickecd:)];
-    self.navigationItem.rightBarButtonItem = rightButton;
-}
-
--(void)rightBarButtonItemClickecd:(id)sender
-{
-    MainViewController * mainViewController = [[MainViewController alloc] init];
-    [self.navigationController pushViewController:mainViewController animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

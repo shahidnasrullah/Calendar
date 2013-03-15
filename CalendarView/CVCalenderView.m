@@ -230,4 +230,36 @@
     itemView.pic_smiley.image = [UIImage imageNamed:@"Default.png"];
 }
 
+-(void)CVcalenderItemView:(CVCalenderItemView *)itemView didLongPressedWithGesture:(UILongPressGestureRecognizer *)longPressedGesture withDate:(NSDate *)date
+{
+    if(!smiliesView)
+    {
+        smiliesView = [[SmiliesView alloc] initWithFrame:CGRectMake(0, self.frame.size.height, 320, 150)];
+        smiliesView.delegate = self;
+        [smiliesView.layer setCornerRadius:10];
+        [smiliesView.layer setBorderColor:[[UIColor blackColor] CGColor]];
+        [self addSubview:smiliesView];
+        [smiliesView.layer setBorderWidth:4];
+    }
+    [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationCurveLinear animations:^{
+        [smiliesView setFrame:CGRectMake(0, self.frame.size.height - 150, 320, 150)];
+    } completion:^(BOOL finished) {
+        
+    }];
+}
+
+#pragma mark - SmiliesView Delegate
+
+-(void)SmiliesDidClicked:(id)sender withView:(SmiliesView *)view
+{
+    if(smiliesView)
+    {
+        [UIView animateWithDuration:0.6 delay:0.0 options:UIViewAnimationCurveLinear animations:^{
+            [smiliesView setFrame:CGRectMake(0, self.frame.size.height, 320, 150)];
+        } completion:^(BOOL finished) {
+            
+        }];
+    }
+}
+
 @end

@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 #import "AppConstants.h"
 #import "CVCalenderItemView.h"
+#import "SmiliesView.h"
 
 typedef enum
 {
@@ -18,7 +20,7 @@ typedef enum
     
 } ANIMATION_DIRECTION;
 
-@interface CVCalendarWeekView : UIView <CVCalenderItemViewDelegate, UIGestureRecognizerDelegate>
+@interface CVCalendarWeekView : UIView <CVCalenderItemViewDelegate, UIGestureRecognizerDelegate, SmiliesViewDelegate>
 {
     NSCalendar * cal;
     NSDateComponents * components;

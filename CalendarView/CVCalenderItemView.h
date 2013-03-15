@@ -28,4 +28,6 @@
 
 - (void)CVCalenderItemView:(CVCalenderItemView*)itemView didClickedOnGesture:(UITapGestureRecognizer *)recognizer withTag:(NSInteger) tag withDate:(NSDate*) date;
 
+- (void)CVcalenderItemView:(CVCalenderItemView*)itemView didLongPressedWithGesture:(UILongPressGestureRecognizer*) longPressedGesture withDate:(NSDate*) date;
+
 @end

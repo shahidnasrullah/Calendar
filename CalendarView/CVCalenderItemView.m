@@ -44,29 +44,15 @@
 {
     switch (gesture.state) {
         case UIGestureRecognizerStateBegan:
-            NSLog(@"Begining....");
-            break;
-        case UIGestureRecognizerStateCancelled:
-            NSLog(@"Canceleed.....");
-            break;
-        case UIGestureRecognizerStateEnded:
-            NSLog(@"Ended....");
-            break;
-        case UIGestureRecognizerStateChanged:
-            NSLog(@"Changed...");
-            break;
-        case UIGestureRecognizerStateFailed:
-            NSLog(@"Failed....");
-            break;
-        case UIGestureRecognizerStatePossible:
-            NSLog(@"Possible...");
+            if ([self.delegate respondsToSelector:@selector(CVcalenderItemView:didLongPressedWithGesture:withDate:)]) {
+                [self.delegate CVcalenderItemView:self didLongPressedWithGesture:gesture withDate:self.currentDate];
+            }
             break;
         default:
             NSLog(@"Recognized");
             break;
     }
-    /*UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"LongPress" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-    [alert show];*/
+    
 }
 
 @end

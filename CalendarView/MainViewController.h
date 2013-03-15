@@ -7,11 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 #import "CVCalendarWeekView.h"
+#import "SmiliesView.h"
+#import "CVCalenderItemView.h"
 
-@interface MainViewController : UIViewController
+
+@class CalendarViewController;
+
+@interface MainViewController : UIViewController<CVCalenderItemViewDelegate, SmiliesViewDelegate>
 {
     CVCalendarWeekView * weekView;
+    SmiliesView * smiliesView;
 }
 
 @end

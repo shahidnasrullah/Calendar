@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F8514A3816F1EB2D00C4AAE9 /* SmileyModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8514A3616F1EB2D00C4AAE9 /* SmileyModel.xcdatamodeld */; };
+		F8514A3B16F1EBAE00C4AAE9 /* Smiley.m in Sources */ = {isa = PBXBuildFile; fileRef = F8514A3A16F1EBAE00C4AAE9 /* Smiley.m */; };
+		F8514A3D16F1ED1000C4AAE9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8514A3C16F1ED0F00C4AAE9 /* CoreData.framework */; };
+		F8514A4116F1EE5000C4AAE9 /* SmiliesView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8514A4016F1EE5000C4AAE9 /* SmiliesView.m */; };
+		F8514A4516F1F1F400C4AAE9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8514A4416F1F1F400C4AAE9 /* QuartzCore.framework */; };
 		F873BB1A16EF7CF9006F9879 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F873BB1816EF7CF9006F9879 /* MainViewController.m */; };
 		F873BB1B16EF7CF9006F9879 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F873BB1916EF7CF9006F9879 /* MainViewController.xib */; };
 		F87F18E716F059B400834748 /* CVCalendarWeekView.m in Sources */ = {isa = PBXBuildFile; fileRef = F87F18E616F059B400834748 /* CVCalendarWeekView.m */; };
@@ -35,6 +40,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F8514A3716F1EB2D00C4AAE9 /* SmileyModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SmileyModel.xcdatamodel; sourceTree = "<group>"; };
+		F8514A3916F1EBAE00C4AAE9 /* Smiley.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Smiley.h; sourceTree = "<group>"; };
+		F8514A3A16F1EBAE00C4AAE9 /* Smiley.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Smiley.m; sourceTree = "<group>"; };
+		F8514A3C16F1ED0F00C4AAE9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F8514A3F16F1EE5000C4AAE9 /* SmiliesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmiliesView.h; sourceTree = "<group>"; };
+		F8514A4016F1EE5000C4AAE9 /* SmiliesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmiliesView.m; sourceTree = "<group>"; };
+		F8514A4416F1F1F400C4AAE9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F873BB1716EF7CF9006F9879 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		F873BB1816EF7CF9006F9879 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		F873BB1916EF7CF9006F9879 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
@@ -79,6 +91,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8514A4516F1F1F400C4AAE9 /* QuartzCore.framework in Frameworks */,
+				F8514A3D16F1ED1000C4AAE9 /* CoreData.framework in Frameworks */,
 				F8D8399C16EDC9E8000FE178 /* UIKit.framework in Frameworks */,
 				F8D8399E16EDC9E8000FE178 /* Foundation.framework in Frameworks */,
 				F8D839A016EDC9E8000FE178 /* CoreGraphics.framework in Frameworks */,
@@ -88,6 +102,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F8514A3516F1EAEC00C4AAE9 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				F8514A3616F1EB2D00C4AAE9 /* SmileyModel.xcdatamodeld */,
+				F8514A3916F1EBAE00C4AAE9 /* Smiley.h */,
+				F8514A3A16F1EBAE00C4AAE9 /* Smiley.m */,
+			);
+			name = "Data Model";
+			sourceTree = "<group>";
+		};
+		F8514A3E16F1EE2000C4AAE9 /* SmileiesView */ = {
+			isa = PBXGroup;
+			children = (
+				F8514A3F16F1EE5000C4AAE9 /* SmiliesView.h */,
+				F8514A4016F1EE5000C4AAE9 /* SmiliesView.m */,
+			);
+			name = SmileiesView;
+			sourceTree = "<group>";
+		};
 		F873BB1416EF7CBC006F9879 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +161,8 @@
 		F8D8399A16EDC9E8000FE178 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F8514A4416F1F1F400C4AAE9 /* QuartzCore.framework */,
+				F8514A3C16F1ED0F00C4AAE9 /* CoreData.framework */,
 				F8D8399B16EDC9E8000FE178 /* UIKit.framework */,
 				F8D8399D16EDC9E8000FE178 /* Foundation.framework */,
 				F8D8399F16EDC9E8000FE178 /* CoreGraphics.framework */,
@@ -138,6 +173,8 @@
 		F8D839A116EDC9E8000FE178 /* CalendarView */ = {
 			isa = PBXGroup;
 			children = (
+				F8514A3E16F1EE2000C4AAE9 /* SmileiesView */,
+				F8514A3516F1EAEC00C4AAE9 /* Data Model */,
 				F873BB1616EF7CD2006F9879 /* Next */,
 				F873BB1416EF7CBC006F9879 /* Home */,
 				F8EDCD3716EDFB3100087164 /* Constants */,
@@ -286,6 +323,9 @@
 				F8EDCD3B16EDFB4900087164 /* AppConstants.m in Sources */,
 				F873BB1A16EF7CF9006F9879 /* MainViewController.m in Sources */,
 				F87F18E716F059B400834748 /* CVCalendarWeekView.m in Sources */,
+				F8514A3816F1EB2D00C4AAE9 /* SmileyModel.xcdatamodeld in Sources */,
+				F8514A3B16F1EBAE00C4AAE9 /* Smiley.m in Sources */,
+				F8514A4116F1EE5000C4AAE9 /* SmiliesView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +445,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F8514A3616F1EB2D00C4AAE9 /* SmileyModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F8514A3716F1EB2D00C4AAE9 /* SmileyModel.xcdatamodel */,
+			);
+			currentVersion = F8514A3716F1EB2D00C4AAE9 /* SmileyModel.xcdatamodel */;
+			path = SmileyModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F8D8398E16EDC9E8000FE178 /* Project object */;
 }

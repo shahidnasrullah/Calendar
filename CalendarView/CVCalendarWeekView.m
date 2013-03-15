@@ -227,12 +227,5 @@
 }
 
 
-#pragma mark - CVCalenderItemView Delegate
-
--(void)CVCalenderItemView:(CVCalenderItemView *)itemView didClickedOnGesture:(UITapGestureRecognizer *)recognizer withTag:(NSInteger)tag withDate:(NSDate *)date
-{
-    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:[NSString stringWithFormat: @"Item Clicked with tag : %d", tag ] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-    [alert show];
-}
 
 @end

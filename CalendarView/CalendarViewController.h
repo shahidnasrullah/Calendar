@@ -15,6 +15,6 @@
     CVCalenderView * calenderView;
 }
 
--(IBAction)rightBarButtonItemClickecd :(id)sender;
+
 
 @end
