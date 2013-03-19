@@ -7,6 +7,7 @@
 //
 
 #import "CVCalenderView.h"
+#import "SmileyListViewController.h"
 
 @implementation CVCalenderView
 
@@ -232,7 +233,7 @@
 
 -(void)CVcalenderItemView:(CVCalenderItemView *)itemView didLongPressedWithGesture:(UILongPressGestureRecognizer *)longPressedGesture withDate:(NSDate *)date
 {
-    if(!smiliesView)
+    /*if(!smiliesView)
     {
         smiliesView = [[SmiliesView alloc] initWithFrame:CGRectMake(0, self.frame.size.height, 320, 150)];
         smiliesView.delegate = self;
@@ -242,24 +243,27 @@
         [smiliesView.layer setBorderWidth:4];
     }
     [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationCurveLinear animations:^{
-        [smiliesView setFrame:CGRectMake(0, self.frame.size.height - 150, 320, 150)];
+        [smiliesView setFrame:CGRectMake(0, self.frame.size.height - 200, 320, 110)];
     } completion:^(BOOL finished) {
         
-    }];
-}
-
-#pragma mark - SmiliesView Delegate
-
--(void)SmiliesDidClicked:(id)sender withView:(SmiliesView *)view
-{
-    if(smiliesView)
+    }];*/
+    SmileyListViewController * smileyListController = [[SmileyListViewController alloc] init];
+    UINavigationController * navController = [[UINavigationController alloc] initWithRootViewController:smileyListController];
+    smileyListController.delegate = self;
+    if(self.viewController)
     {
-        [UIView animateWithDuration:0.6 delay:0.0 options:UIViewAnimationCurveLinear animations:^{
-            [smiliesView setFrame:CGRectMake(0, self.frame.size.height, 320, 150)];
-        } completion:^(BOOL finished) {
+        [(UIViewController*) self.viewController presentViewController:navController animated:YES completion:^{
             
         }];
     }
+}
+
+#pragma mark - SmiliesListViewContrtoller Delegate
+
+-(void) SmiliesDidClicked:(id)sender withData:(id) data
+{
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Tittle" message:[NSString stringWithFormat:@"Tag: %@", data] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 @end

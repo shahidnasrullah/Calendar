@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F81A7DA916F6F586001744E5 /* SmileyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F81A7DA716F6F586001744E5 /* SmileyListViewController.m */; };
+		F81A7DAA16F6F586001744E5 /* SmileyListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F81A7DA816F6F586001744E5 /* SmileyListViewController.xib */; };
 		F8514A3816F1EB2D00C4AAE9 /* SmileyModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8514A3616F1EB2D00C4AAE9 /* SmileyModel.xcdatamodeld */; };
 		F8514A3B16F1EBAE00C4AAE9 /* Smiley.m in Sources */ = {isa = PBXBuildFile; fileRef = F8514A3A16F1EBAE00C4AAE9 /* Smiley.m */; };
 		F8514A3D16F1ED1000C4AAE9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8514A3C16F1ED0F00C4AAE9 /* CoreData.framework */; };
@@ -40,6 +42,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F81A7DA616F6F586001744E5 /* SmileyListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmileyListViewController.h; sourceTree = "<group>"; };
+		F81A7DA716F6F586001744E5 /* SmileyListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmileyListViewController.m; sourceTree = "<group>"; };
+		F81A7DA816F6F586001744E5 /* SmileyListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmileyListViewController.xib; sourceTree = "<group>"; };
 		F8514A3716F1EB2D00C4AAE9 /* SmileyModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SmileyModel.xcdatamodel; sourceTree = "<group>"; };
 		F8514A3916F1EBAE00C4AAE9 /* Smiley.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Smiley.h; sourceTree = "<group>"; };
 		F8514A3A16F1EBAE00C4AAE9 /* Smiley.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Smiley.m; sourceTree = "<group>"; };
@@ -117,6 +122,9 @@
 			children = (
 				F8514A3F16F1EE5000C4AAE9 /* SmiliesView.h */,
 				F8514A4016F1EE5000C4AAE9 /* SmiliesView.m */,
+				F81A7DA616F6F586001744E5 /* SmileyListViewController.h */,
+				F81A7DA716F6F586001744E5 /* SmileyListViewController.m */,
+				F81A7DA816F6F586001744E5 /* SmileyListViewController.xib */,
 			);
 			name = SmileiesView;
 			sourceTree = "<group>";
@@ -303,6 +311,7 @@
 				F8F4536C16EF4513004FC567 /* right_arrow.png in Resources */,
 				F873BB1B16EF7CF9006F9879 /* MainViewController.xib in Resources */,
 				F87F18EC16F0722600834748 /* CVCalendarWeekView.xib in Resources */,
+				F81A7DAA16F6F586001744E5 /* SmileyListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +335,7 @@
 				F8514A3816F1EB2D00C4AAE9 /* SmileyModel.xcdatamodeld in Sources */,
 				F8514A3B16F1EBAE00C4AAE9 /* Smiley.m in Sources */,
 				F8514A4116F1EE5000C4AAE9 /* SmiliesView.m in Sources */,
+				F81A7DA916F6F586001744E5 /* SmileyListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

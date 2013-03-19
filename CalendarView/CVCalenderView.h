@@ -12,9 +12,10 @@
 #import "CVCalenderItemView.h"
 #import "AppConstants.h"
 #import <QuartzCore/QuartzCore.h>
-#import "SmiliesView.h"
+#import "SmileyListViewController.h"
+//#import "SmiliesView.h"
 
-@interface CVCalenderView : UIView <CVtitleViewDelegate, CVCalenderItemViewDelegate, SmiliesViewDelegate>
+@interface CVCalenderView : UIView <CVtitleViewDelegate, CVCalenderItemViewDelegate, SmiliesListViewControllerDelegate>
 {
     CVTitleView * titleView;
     CVDaysView * daysView;
@@ -23,8 +24,10 @@
     NSCalendar *cal;
     NSMutableArray * calenderItems;
     NSDateComponents *components;
-    SmiliesView * smiliesView;
+    //SmiliesView * smiliesView;
 }
+
+@property (nonatomic, retain) id viewController;
 
 
 @end

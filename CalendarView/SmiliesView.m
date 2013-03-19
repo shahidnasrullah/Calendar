@@ -19,15 +19,15 @@
         smiliesArray = [[NSMutableArray alloc] init];
         [self createSmiliesButtons];
         self.backgroundColor = [UIColor grayColor];
-        self.alpha = 0.5;
+        //self.alpha = 0.5;
     }
     return self;
 }
 
 -(void) createSmiliesButtons
 {
-    int xOffset =0, yOffset = 0;
-    for (int i =0; i< 20; i++) {
+    int xOffset =5, yOffset = 10;
+    for (int i =0; i< 14; i++) {
         UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button setFrame:CGRectMake(xOffset, yOffset, 40, 40)];
         [button setBackgroundImage:[UIImage imageNamed:@"images.jpeg"] forState:UIControlStateNormal];
@@ -36,9 +36,9 @@
         [button addTarget:self action:@selector(ButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:button];
         xOffset += 45;
-        if(xOffset > 320)
+        if(xOffset >= 320)
         {
-            xOffset = 0;
+            xOffset = 5;
             yOffset += 45;
         }
     }

@@ -19,6 +19,7 @@
     [super viewDidLoad];
     self.title = @"Calendar";
     calenderView = [[CVCalenderView alloc] initWithFrame:self.view.frame];
+    calenderView.viewController = self;
     [self.view addSubview:calenderView];
 
 	// Do any additional setup after loading the view, typically from a nib.
