@@ -11,6 +11,7 @@
 #import "CVCalendarWeekView.h"
 #import "SmiliesView.h"
 #import "CVCalenderItemView.h"
+#import "SmiliesScrollView.h"
 
 
 @class CalendarViewController;
@@ -18,7 +19,11 @@
 @interface MainViewController : UIViewController<CVCalenderItemViewDelegate, SmiliesViewDelegate>
 {
     CVCalendarWeekView * weekView;
-    SmiliesView * smiliesView;
+    //SmiliesView * smiliesView;
+    SmiliesScrollView * smiliesScrollView;
 }
+@property (weak, nonatomic) IBOutlet UIScrollView *question_scrollView;
+@property (weak, nonatomic) IBOutlet UIScrollView *quote_scrollView;
+- (IBAction)btn_monthClicked:(id)sender;
 
 @end

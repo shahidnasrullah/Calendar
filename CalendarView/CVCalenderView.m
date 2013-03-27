@@ -8,6 +8,7 @@
 
 #import "CVCalenderView.h"
 #import "SmileyListViewController.h"
+#import "AppConstants.h"
 
 @implementation CVCalenderView
 
@@ -18,7 +19,7 @@
         calenderItems = [[NSMutableArray alloc] init];
         [self createTopView];
         [self createDaysViews];
-        [self createCalenderViewItems:[NSDate date]];
+        [self createCalenderViewItems:[AppConstants getStartDate]];
     }
     return self;
 }
@@ -247,7 +248,7 @@
     } completion:^(BOOL finished) {
         
     }];*/
-    SmileyListViewController * smileyListController = [[SmileyListViewController alloc] init];
+    /*SmileyListViewController * smileyListController = [[SmileyListViewController alloc] init];
     UINavigationController * navController = [[UINavigationController alloc] initWithRootViewController:smileyListController];
     smileyListController.delegate = self;
     if(self.viewController)
@@ -255,7 +256,21 @@
         [(UIViewController*) self.viewController presentViewController:navController animated:YES completion:^{
             
         }];
+    }*/
+    
+    if(!smiliesScrollView)
+    {
+        NSArray * nibsArray = [[NSBundle mainBundle] loadNibNamed:@"SmiliesView" owner:nil options:nil];
+        smiliesScrollView = [nibsArray objectAtIndex:0];
+        [smiliesScrollView setFrame:CGRectMake(0, self.frame.size.height, 320, 240)];
+        [smiliesScrollView createPages];
+        [self addSubview:smiliesScrollView];
     }
+    [UIView animateWithDuration:0.5 animations:^{
+        [smiliesScrollView setFrame:CGRectMake(0, self.frame.size.height - smiliesScrollView.frame.size.height, smiliesScrollView.frame.size.width, smiliesScrollView.frame.size.height + 10)];
+    } completion:^(BOOL finished) {
+        
+    }];
 }
 
 #pragma mark - SmiliesListViewContrtoller Delegate

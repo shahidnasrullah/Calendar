@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		F81A7DA916F6F586001744E5 /* SmileyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F81A7DA716F6F586001744E5 /* SmileyListViewController.m */; };
 		F81A7DAA16F6F586001744E5 /* SmileyListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F81A7DA816F6F586001744E5 /* SmileyListViewController.xib */; };
+		F83207EF16FC252C00F5BB2B /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F83207ED16FC252C00F5BB2B /* SettingsViewController.m */; };
+		F83207F016FC252C00F5BB2B /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F83207EE16FC252C00F5BB2B /* SettingsViewController.xib */; };
+		F83207FA16FC2AC500F5BB2B /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = F83207F916FC2AC500F5BB2B /* settings.png */; };
+		F84B1C24170082BD00AFE0AA /* SmiliesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F84B1C23170082BD00AFE0AA /* SmiliesView.xib */; };
+		F84B1C371700927F00AFE0AA /* SmiliesScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F84B1C361700927F00AFE0AA /* SmiliesScrollView.m */; };
 		F8514A3816F1EB2D00C4AAE9 /* SmileyModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8514A3616F1EB2D00C4AAE9 /* SmileyModel.xcdatamodeld */; };
 		F8514A3B16F1EBAE00C4AAE9 /* Smiley.m in Sources */ = {isa = PBXBuildFile; fileRef = F8514A3A16F1EBAE00C4AAE9 /* Smiley.m */; };
 		F8514A3D16F1ED1000C4AAE9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8514A3C16F1ED0F00C4AAE9 /* CoreData.framework */; };
@@ -36,6 +41,19 @@
 		F8D839CC16EDD056000FE178 /* CVDaysView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D839CB16EDD056000FE178 /* CVDaysView.m */; };
 		F8D839CE16EDE1BD000FE178 /* CVTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8D839CD16EDE1BC000FE178 /* CVTitleView.xib */; };
 		F8EDCD3B16EDFB4900087164 /* AppConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = F8EDCD3A16EDFB4900087164 /* AppConstants.m */; };
+		F8F13CF21702C579004A9A6E /* DatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F13CF01702C579004A9A6E /* DatePickerViewController.m */; };
+		F8F13CF31702C579004A9A6E /* DatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8F13CF11702C579004A9A6E /* DatePickerViewController.xib */; };
+		F8F13CFA1702C927004A9A6E /* FriendsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F13CF81702C927004A9A6E /* FriendsListViewController.m */; };
+		F8F13CFB1702C927004A9A6E /* FriendsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8F13CF91702C927004A9A6E /* FriendsListViewController.xib */; };
+		F8F13D001702CADB004A9A6E /* FriendsListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F13CFF1702CADB004A9A6E /* FriendsListViewCell.m */; };
+		F8F13D021702CAF0004A9A6E /* FriendsListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8F13D011702CAF0004A9A6E /* FriendsListViewCell.xib */; };
+		F8F13D061702DA38004A9A6E /* AccessLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F13D041702DA38004A9A6E /* AccessLevelViewController.m */; };
+		F8F13D071702DA38004A9A6E /* AccessLevelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8F13D051702DA38004A9A6E /* AccessLevelViewController.xib */; };
+		F8F13D101702FBB6004A9A6E /* Answer.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F13D0F1702FBB6004A9A6E /* Answer.m */; };
+		F8F13D131702FBB7004A9A6E /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F13D121702FBB7004A9A6E /* Question.m */; };
+		F8F13D161702FD93004A9A6E /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F13D151702FD93004A9A6E /* Activity.m */; };
+		F8F13D191702FD94004A9A6E /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F13D181702FD94004A9A6E /* Score.m */; };
+		F8F13D1C1702FD94004A9A6E /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F13D1B1702FD94004A9A6E /* User.m */; };
 		F8F4536716EF403D004FC567 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F8F4536616EF403D004FC567 /* images.jpeg */; };
 		F8F4536A16EF450C004FC567 /* left_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = F8F4536916EF450C004FC567 /* left_arrow.png */; };
 		F8F4536C16EF4513004FC567 /* right_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = F8F4536B16EF4513004FC567 /* right_arrow.png */; };
@@ -45,6 +63,13 @@
 		F81A7DA616F6F586001744E5 /* SmileyListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmileyListViewController.h; sourceTree = "<group>"; };
 		F81A7DA716F6F586001744E5 /* SmileyListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmileyListViewController.m; sourceTree = "<group>"; };
 		F81A7DA816F6F586001744E5 /* SmileyListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmileyListViewController.xib; sourceTree = "<group>"; };
+		F83207EC16FC252C00F5BB2B /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		F83207ED16FC252C00F5BB2B /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		F83207EE16FC252C00F5BB2B /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		F83207F916FC2AC500F5BB2B /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		F84B1C23170082BD00AFE0AA /* SmiliesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmiliesView.xib; sourceTree = "<group>"; };
+		F84B1C351700927F00AFE0AA /* SmiliesScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmiliesScrollView.h; sourceTree = "<group>"; };
+		F84B1C361700927F00AFE0AA /* SmiliesScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmiliesScrollView.m; sourceTree = "<group>"; };
 		F8514A3716F1EB2D00C4AAE9 /* SmileyModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SmileyModel.xcdatamodel; sourceTree = "<group>"; };
 		F8514A3916F1EBAE00C4AAE9 /* Smiley.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Smiley.h; sourceTree = "<group>"; };
 		F8514A3A16F1EBAE00C4AAE9 /* Smiley.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Smiley.m; sourceTree = "<group>"; };
@@ -86,6 +111,28 @@
 		F8D839CD16EDE1BC000FE178 /* CVTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CVTitleView.xib; sourceTree = "<group>"; };
 		F8EDCD3916EDFB4900087164 /* AppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
 		F8EDCD3A16EDFB4900087164 /* AppConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConstants.m; sourceTree = "<group>"; };
+		F8F13CEF1702C579004A9A6E /* DatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerViewController.h; sourceTree = "<group>"; };
+		F8F13CF01702C579004A9A6E /* DatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerViewController.m; sourceTree = "<group>"; };
+		F8F13CF11702C579004A9A6E /* DatePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePickerViewController.xib; sourceTree = "<group>"; };
+		F8F13CF71702C927004A9A6E /* FriendsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsListViewController.h; sourceTree = "<group>"; };
+		F8F13CF81702C927004A9A6E /* FriendsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsListViewController.m; sourceTree = "<group>"; };
+		F8F13CF91702C927004A9A6E /* FriendsListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendsListViewController.xib; sourceTree = "<group>"; };
+		F8F13CFE1702CADB004A9A6E /* FriendsListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsListViewCell.h; sourceTree = "<group>"; };
+		F8F13CFF1702CADB004A9A6E /* FriendsListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsListViewCell.m; sourceTree = "<group>"; };
+		F8F13D011702CAF0004A9A6E /* FriendsListViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendsListViewCell.xib; sourceTree = "<group>"; };
+		F8F13D031702DA38004A9A6E /* AccessLevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessLevelViewController.h; sourceTree = "<group>"; };
+		F8F13D041702DA38004A9A6E /* AccessLevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessLevelViewController.m; sourceTree = "<group>"; };
+		F8F13D051702DA38004A9A6E /* AccessLevelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccessLevelViewController.xib; sourceTree = "<group>"; };
+		F8F13D0E1702FBB6004A9A6E /* Answer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Answer.h; sourceTree = "<group>"; };
+		F8F13D0F1702FBB6004A9A6E /* Answer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Answer.m; sourceTree = "<group>"; };
+		F8F13D111702FBB7004A9A6E /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		F8F13D121702FBB7004A9A6E /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		F8F13D141702FD93004A9A6E /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
+		F8F13D151702FD93004A9A6E /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
+		F8F13D171702FD94004A9A6E /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
+		F8F13D181702FD94004A9A6E /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
+		F8F13D1A1702FD94004A9A6E /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		F8F13D1B1702FD94004A9A6E /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		F8F4536616EF403D004FC567 /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpeg; sourceTree = "<group>"; };
 		F8F4536916EF450C004FC567 /* left_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_arrow.png; sourceTree = "<group>"; };
 		F8F4536B16EF4513004FC567 /* right_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right_arrow.png; sourceTree = "<group>"; };
@@ -107,10 +154,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F83207EA16FC251100F5BB2B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F8F13CF61702C90B004A9A6E /* Friends List */,
+				F8F13CF51702C8EB004A9A6E /* FriendsAccessLevel */,
+				F8F13CF41702C783004A9A6E /* SettingsController */,
+				F8F13CED1702C554004A9A6E /* Date Picker */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
 		F8514A3516F1EAEC00C4AAE9 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
 				F8514A3616F1EB2D00C4AAE9 /* SmileyModel.xcdatamodeld */,
+				F8F13D1A1702FD94004A9A6E /* User.h */,
+				F8F13D1B1702FD94004A9A6E /* User.m */,
+				F8F13D171702FD94004A9A6E /* Score.h */,
+				F8F13D181702FD94004A9A6E /* Score.m */,
+				F8F13D141702FD93004A9A6E /* Activity.h */,
+				F8F13D151702FD93004A9A6E /* Activity.m */,
+				F8F13D111702FBB7004A9A6E /* Question.h */,
+				F8F13D121702FBB7004A9A6E /* Question.m */,
+				F8F13D0E1702FBB6004A9A6E /* Answer.h */,
+				F8F13D0F1702FBB6004A9A6E /* Answer.m */,
 				F8514A3916F1EBAE00C4AAE9 /* Smiley.h */,
 				F8514A3A16F1EBAE00C4AAE9 /* Smiley.m */,
 			);
@@ -125,28 +193,31 @@
 				F81A7DA616F6F586001744E5 /* SmileyListViewController.h */,
 				F81A7DA716F6F586001744E5 /* SmileyListViewController.m */,
 				F81A7DA816F6F586001744E5 /* SmileyListViewController.xib */,
+				F84B1C23170082BD00AFE0AA /* SmiliesView.xib */,
+				F84B1C351700927F00AFE0AA /* SmiliesScrollView.h */,
+				F84B1C361700927F00AFE0AA /* SmiliesScrollView.m */,
 			);
 			name = SmileiesView;
 			sourceTree = "<group>";
 		};
-		F873BB1416EF7CBC006F9879 /* Home */ = {
+		F873BB1416EF7CBC006F9879 /* Calender Controller */ = {
 			isa = PBXGroup;
 			children = (
 				F8D839B316EDC9E8000FE178 /* CalendarViewController.h */,
 				F8D839B416EDC9E8000FE178 /* CalendarViewController.m */,
 				F8D839B616EDC9E8000FE178 /* CalendarViewController.xib */,
 			);
-			name = Home;
+			name = "Calender Controller";
 			sourceTree = "<group>";
 		};
-		F873BB1616EF7CD2006F9879 /* Next */ = {
+		F873BB1616EF7CD2006F9879 /* Home Controller */ = {
 			isa = PBXGroup;
 			children = (
 				F873BB1716EF7CF9006F9879 /* MainViewController.h */,
 				F873BB1816EF7CF9006F9879 /* MainViewController.m */,
 				F873BB1916EF7CF9006F9879 /* MainViewController.xib */,
 			);
-			name = Next;
+			name = "Home Controller";
 			sourceTree = "<group>";
 		};
 		F8D8398C16EDC9E8000FE178 = {
@@ -181,10 +252,11 @@
 		F8D839A116EDC9E8000FE178 /* CalendarView */ = {
 			isa = PBXGroup;
 			children = (
+				F83207EA16FC251100F5BB2B /* Settings */,
 				F8514A3E16F1EE2000C4AAE9 /* SmileiesView */,
 				F8514A3516F1EAEC00C4AAE9 /* Data Model */,
-				F873BB1616EF7CD2006F9879 /* Next */,
-				F873BB1416EF7CBC006F9879 /* Home */,
+				F873BB1616EF7CD2006F9879 /* Home Controller */,
+				F873BB1416EF7CBC006F9879 /* Calender Controller */,
 				F8EDCD3716EDFB3100087164 /* Constants */,
 				F8D839BE16EDCA10000FE178 /* Calendar */,
 				F8D839AA16EDC9E8000FE178 /* AppDelegate.h */,
@@ -238,9 +310,69 @@
 			name = Constants;
 			sourceTree = "<group>";
 		};
+		F8F13CED1702C554004A9A6E /* Date Picker */ = {
+			isa = PBXGroup;
+			children = (
+				F8F13CEF1702C579004A9A6E /* DatePickerViewController.h */,
+				F8F13CF01702C579004A9A6E /* DatePickerViewController.m */,
+				F8F13CF11702C579004A9A6E /* DatePickerViewController.xib */,
+			);
+			name = "Date Picker";
+			sourceTree = "<group>";
+		};
+		F8F13CF41702C783004A9A6E /* SettingsController */ = {
+			isa = PBXGroup;
+			children = (
+				F83207EC16FC252C00F5BB2B /* SettingsViewController.h */,
+				F83207ED16FC252C00F5BB2B /* SettingsViewController.m */,
+				F83207EE16FC252C00F5BB2B /* SettingsViewController.xib */,
+			);
+			name = SettingsController;
+			sourceTree = "<group>";
+		};
+		F8F13CF51702C8EB004A9A6E /* FriendsAccessLevel */ = {
+			isa = PBXGroup;
+			children = (
+				F8F13D031702DA38004A9A6E /* AccessLevelViewController.h */,
+				F8F13D041702DA38004A9A6E /* AccessLevelViewController.m */,
+				F8F13D051702DA38004A9A6E /* AccessLevelViewController.xib */,
+			);
+			name = FriendsAccessLevel;
+			sourceTree = "<group>";
+		};
+		F8F13CF61702C90B004A9A6E /* Friends List */ = {
+			isa = PBXGroup;
+			children = (
+				F8F13CFD1702CAA8004A9A6E /* Friends List View Cell */,
+				F8F13CFC1702CA97004A9A6E /* Friends List Controller */,
+			);
+			name = "Friends List";
+			sourceTree = "<group>";
+		};
+		F8F13CFC1702CA97004A9A6E /* Friends List Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F8F13CF71702C927004A9A6E /* FriendsListViewController.h */,
+				F8F13CF81702C927004A9A6E /* FriendsListViewController.m */,
+				F8F13CF91702C927004A9A6E /* FriendsListViewController.xib */,
+			);
+			name = "Friends List Controller";
+			sourceTree = "<group>";
+		};
+		F8F13CFD1702CAA8004A9A6E /* Friends List View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F8F13CFE1702CADB004A9A6E /* FriendsListViewCell.h */,
+				F8F13CFF1702CADB004A9A6E /* FriendsListViewCell.m */,
+				F8F13D011702CAF0004A9A6E /* FriendsListViewCell.xib */,
+			);
+			name = "Friends List View Cell";
+			sourceTree = "<group>";
+		};
 		F8F4536D16EF4517004FC567 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F83207F916FC2AC500F5BB2B /* settings.png */,
 				F8F4536B16EF4513004FC567 /* right_arrow.png */,
 				F8F4536916EF450C004FC567 /* left_arrow.png */,
 				F8F4536616EF403D004FC567 /* images.jpeg */,
@@ -312,6 +444,13 @@
 				F873BB1B16EF7CF9006F9879 /* MainViewController.xib in Resources */,
 				F87F18EC16F0722600834748 /* CVCalendarWeekView.xib in Resources */,
 				F81A7DAA16F6F586001744E5 /* SmileyListViewController.xib in Resources */,
+				F83207F016FC252C00F5BB2B /* SettingsViewController.xib in Resources */,
+				F83207FA16FC2AC500F5BB2B /* settings.png in Resources */,
+				F84B1C24170082BD00AFE0AA /* SmiliesView.xib in Resources */,
+				F8F13CF31702C579004A9A6E /* DatePickerViewController.xib in Resources */,
+				F8F13CFB1702C927004A9A6E /* FriendsListViewController.xib in Resources */,
+				F8F13D021702CAF0004A9A6E /* FriendsListViewCell.xib in Resources */,
+				F8F13D071702DA38004A9A6E /* AccessLevelViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +475,17 @@
 				F8514A3B16F1EBAE00C4AAE9 /* Smiley.m in Sources */,
 				F8514A4116F1EE5000C4AAE9 /* SmiliesView.m in Sources */,
 				F81A7DA916F6F586001744E5 /* SmileyListViewController.m in Sources */,
+				F83207EF16FC252C00F5BB2B /* SettingsViewController.m in Sources */,
+				F84B1C371700927F00AFE0AA /* SmiliesScrollView.m in Sources */,
+				F8F13CF21702C579004A9A6E /* DatePickerViewController.m in Sources */,
+				F8F13CFA1702C927004A9A6E /* FriendsListViewController.m in Sources */,
+				F8F13D001702CADB004A9A6E /* FriendsListViewCell.m in Sources */,
+				F8F13D061702DA38004A9A6E /* AccessLevelViewController.m in Sources */,
+				F8F13D101702FBB6004A9A6E /* Answer.m in Sources */,
+				F8F13D131702FBB7004A9A6E /* Question.m in Sources */,
+				F8F13D161702FD93004A9A6E /* Activity.m in Sources */,
+				F8F13D191702FD94004A9A6E /* Score.m in Sources */,
+				F8F13D1C1702FD94004A9A6E /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,6 +14,10 @@
     NSMutableArray * smiliesArray;
 }
 @property (nonatomic, retain) id delegate;
+- (IBAction)btn_closeClicked:(id)sender;
+- (IBAction)btn_selectClicked:(id)sender;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 
 @end
 

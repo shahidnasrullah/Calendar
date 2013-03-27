@@ -12,5 +12,24 @@
 @synthesize days;
 
 
++(NSDate *)getStartDate
+{
+    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+    NSDate * date = [defaults objectForKey:kStartDate];
+    if(!date)
+    {
+        date = [NSDate date];
+        [defaults setValue:date forKey:kStartDate];
+    }
+    
+    return date;
+}
+
++(void)setStartDate:(NSDate *)date
+{
+    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setValue:date forKey:kStartDate];
+}
+
 
 @end

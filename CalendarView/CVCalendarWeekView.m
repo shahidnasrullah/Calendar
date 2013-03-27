@@ -38,6 +38,12 @@
     return monthName;
 }
 
+-(void) createDaysView
+{
+    daysView = [[CVDaysView alloc] initWithFrame:CGRectMake(0, 35, 320, 25)];
+    [self addSubview:daysView];
+}
+
 -(NSString*) getNextMonthName:(NSDate*) date
 {
     NSDateFormatter * form = [[NSDateFormatter alloc] init];
@@ -61,7 +67,7 @@
 
 -(void) createCalenderViewItems:(NSDate *) date
 {
-    int xOffsetForword = 0, yOffsetForword = 35;
+    int xOffsetForword = 0, yOffsetForword = 60;
     if(!calenderItems){
         calenderItems = [[NSMutableArray alloc] init];
     }

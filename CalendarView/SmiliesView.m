@@ -65,4 +65,9 @@
 }
 */
 
+- (IBAction)btn_closeClicked:(id)sender {
+}
+
+- (IBAction)btn_selectClicked:(id)sender {
+}
 @end

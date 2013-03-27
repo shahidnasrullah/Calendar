@@ -1,11 +1,51 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C60" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Activity" representedClassName="Activity" syncable="YES">
+        <attribute name="activityId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="day" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="nick" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="fkActivityToUser" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="fkUserToActivity" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Answer" representedClassName="Answer" syncable="YES">
+        <attribute name="answer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nick" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="questionId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="fkAnswerToQuestion" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Question" inverseName="fkQuestionToAnswer" inverseEntity="Question" syncable="YES"/>
+        <relationship name="fkAnswerToUser" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="fkUserToAnswer" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Question" representedClassName="Question" syncable="YES">
+        <attribute name="answerId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="answers" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="endDay" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="question" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="questionId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="startDay" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="fkQuestionToAnswer" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="Answer" inverseName="fkAnswerToQuestion" inverseEntity="Answer" syncable="YES"/>
+    </entity>
+    <entity name="Score" representedClassName="Score" syncable="YES">
+        <attribute name="nick" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="score" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="fkScoreToUser" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="fkUserToScore" inverseEntity="User" syncable="YES"/>
+    </entity>
     <entity name="Smiley" representedClassName="Smiley" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="nick" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="fkUserToActivity" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="fkActivityToUser" inverseEntity="Activity" syncable="YES"/>
+        <relationship name="fkUserToAnswer" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="Answer" inverseName="fkAnswerToUser" inverseEntity="Answer" syncable="YES"/>
+        <relationship name="fkUserToScore" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Score" inverseName="fkScoreToUser" inverseEntity="Score" syncable="YES"/>
+    </entity>
     <elements>
         <element name="Smiley" positionX="-1350" positionY="1062" width="128" height="90"/>
+        <element name="Activity" positionX="-243" positionY="171" width="128" height="118"/>
+        <element name="Answer" positionX="-225" positionY="495" width="128" height="118"/>
+        <element name="Question" positionX="-522" positionY="441" width="128" height="148"/>
+        <element name="Score" positionX="-173" positionY="315" width="128" height="88"/>
+        <element name="User" positionX="-479" positionY="260" width="128" height="118"/>
     </elements>
 </model>

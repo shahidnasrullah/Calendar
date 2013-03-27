@@ -13,6 +13,7 @@
 #import "AppConstants.h"
 #import <QuartzCore/QuartzCore.h>
 #import "SmileyListViewController.h"
+#import "SmiliesScrollView.h"
 //#import "SmiliesView.h"
 
 @interface CVCalenderView : UIView <CVtitleViewDelegate, CVCalenderItemViewDelegate, SmiliesListViewControllerDelegate>
@@ -24,6 +25,7 @@
     NSCalendar *cal;
     NSMutableArray * calenderItems;
     NSDateComponents *components;
+    SmiliesScrollView * smiliesScrollView;
     //SmiliesView * smiliesView;
 }
 

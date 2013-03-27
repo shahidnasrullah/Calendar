@@ -11,6 +11,7 @@
 #import "AppConstants.h"
 #import "CVCalenderItemView.h"
 #import "SmiliesView.h"
+#import "CVDaysView.h"
 
 typedef enum
 {
@@ -27,11 +28,13 @@ typedef enum
     NSMutableArray * calenderItems;
     int firstDayOfWeek;
     ANIMATION_DIRECTION anim_direction;
+    CVDaysView * daysView;
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *lbl_title;
 
 -(void) createCalenderViewItems:(NSDate *) date;
+-(void) createDaysView;
 - (IBAction)leftArrowClicked:(id)sender;
 - (IBAction)rightArrowClicked:(id)sender;
 @end
