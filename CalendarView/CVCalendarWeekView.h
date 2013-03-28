@@ -21,6 +21,15 @@ typedef enum
     
 } ANIMATION_DIRECTION;
 
+@protocol CVCalendarWeekViewDelegate <NSObject>
+
+// When Long pressed on calender item
+-(void)CVcalenderItemView:(CVCalenderItemView *)itemView didLongPressedWithGesture:(UILongPressGestureRecognizer *)longPressedGesture withDate:(NSDate *)date;
+// When Clicked on calendar item
+-(void)CVCalenderItemView:(CVCalenderItemView *)itemView didClickedOnGesture:(UITapGestureRecognizer *)recognizer withTag:(NSInteger)tag withDate:(NSDate *)date;
+
+@end
+
 @interface CVCalendarWeekView : UIView <CVCalenderItemViewDelegate, UIGestureRecognizerDelegate, SmiliesViewDelegate>
 {
     NSCalendar * cal;
@@ -32,9 +41,11 @@ typedef enum
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *lbl_title;
+@property (nonatomic, retain) id delegate;
 
 -(void) createCalenderViewItems:(NSDate *) date;
 -(void) createDaysView;
 - (IBAction)leftArrowClicked:(id)sender;
 - (IBAction)rightArrowClicked:(id)sender;
 @end
+

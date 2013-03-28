@@ -54,6 +54,7 @@
 		F8F13D161702FD93004A9A6E /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F13D151702FD93004A9A6E /* Activity.m */; };
 		F8F13D191702FD94004A9A6E /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F13D181702FD94004A9A6E /* Score.m */; };
 		F8F13D1C1702FD94004A9A6E /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F13D1B1702FD94004A9A6E /* User.m */; };
+		F8F13D2917032F1D004A9A6E /* CustomActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F13D2817032F1D004A9A6E /* CustomActionSheet.m */; };
 		F8F4536716EF403D004FC567 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F8F4536616EF403D004FC567 /* images.jpeg */; };
 		F8F4536A16EF450C004FC567 /* left_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = F8F4536916EF450C004FC567 /* left_arrow.png */; };
 		F8F4536C16EF4513004FC567 /* right_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = F8F4536B16EF4513004FC567 /* right_arrow.png */; };
@@ -133,6 +134,8 @@
 		F8F13D181702FD94004A9A6E /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
 		F8F13D1A1702FD94004A9A6E /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		F8F13D1B1702FD94004A9A6E /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		F8F13D2717032F1D004A9A6E /* CustomActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomActionSheet.h; sourceTree = "<group>"; };
+		F8F13D2817032F1D004A9A6E /* CustomActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomActionSheet.m; sourceTree = "<group>"; };
 		F8F4536616EF403D004FC567 /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpeg; sourceTree = "<group>"; };
 		F8F4536916EF450C004FC567 /* left_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_arrow.png; sourceTree = "<group>"; };
 		F8F4536B16EF4513004FC567 /* right_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right_arrow.png; sourceTree = "<group>"; };
@@ -252,6 +255,7 @@
 		F8D839A116EDC9E8000FE178 /* CalendarView */ = {
 			isa = PBXGroup;
 			children = (
+				F8F13D2517032EF6004A9A6E /* Custom Action Sheet */,
 				F83207EA16FC251100F5BB2B /* Settings */,
 				F8514A3E16F1EE2000C4AAE9 /* SmileiesView */,
 				F8514A3516F1EAEC00C4AAE9 /* Data Model */,
@@ -367,6 +371,15 @@
 				F8F13D011702CAF0004A9A6E /* FriendsListViewCell.xib */,
 			);
 			name = "Friends List View Cell";
+			sourceTree = "<group>";
+		};
+		F8F13D2517032EF6004A9A6E /* Custom Action Sheet */ = {
+			isa = PBXGroup;
+			children = (
+				F8F13D2717032F1D004A9A6E /* CustomActionSheet.h */,
+				F8F13D2817032F1D004A9A6E /* CustomActionSheet.m */,
+			);
+			name = "Custom Action Sheet";
 			sourceTree = "<group>";
 		};
 		F8F4536D16EF4517004FC567 /* Images */ = {
@@ -486,6 +499,7 @@
 				F8F13D161702FD93004A9A6E /* Activity.m in Sources */,
 				F8F13D191702FD94004A9A6E /* Score.m in Sources */,
 				F8F13D1C1702FD94004A9A6E /* User.m in Sources */,
+				F8F13D2917032F1D004A9A6E /* CustomActionSheet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

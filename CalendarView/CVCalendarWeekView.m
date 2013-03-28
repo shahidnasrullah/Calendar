@@ -232,6 +232,24 @@
     [self createCalenderViewItems:date];
 }
 
+#pragma mark - CVCalenderItemView Delegate
+
+-(void)CVcalenderItemView:(CVCalenderItemView *)itemView didLongPressedWithGesture:(UILongPressGestureRecognizer *)longPressedGesture withDate:(NSDate *)date
+{
+    if([self.delegate respondsToSelector:@selector(CVcalenderItemView:didLongPressedWithGesture:withDate:)])
+    {
+        [self.delegate CVcalenderItemView:itemView didLongPressedWithGesture:longPressedGesture withDate:date];
+    }
+}
+
+-(void)CVCalenderItemView:(CVCalenderItemView *)itemView didClickedOnGesture:(UITapGestureRecognizer *)recognizer withTag:(NSInteger)tag withDate:(NSDate *)date
+{
+    if([self.delegate respondsToSelector:@selector(CVCalenderItemView:didClickedOnGesture:withTag:withDate:)])
+    {
+        [self.delegate CVCalenderItemView:itemView didClickedOnGesture:recognizer withTag:tag withDate:date];
+    }
+}
+
 
 
 @end

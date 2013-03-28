@@ -11,16 +11,16 @@
 #import "CVCalendarWeekView.h"
 #import "SmiliesView.h"
 #import "CVCalenderItemView.h"
-#import "SmiliesScrollView.h"
+#import "CustomActionSheet.h"
 
 
 @class CalendarViewController;
 
-@interface MainViewController : UIViewController<CVCalenderItemViewDelegate, SmiliesViewDelegate>
+@interface MainViewController : UIViewController<CVCalenderItemViewDelegate, CustomActionSheetDelegate, CVCalendarWeekViewDelegate>
 {
     CVCalendarWeekView * weekView;
-    //SmiliesView * smiliesView;
-    SmiliesScrollView * smiliesScrollView;
+    CustomActionSheet * customActionSheetView;
+    
 }
 @property (weak, nonatomic) IBOutlet UIScrollView *question_scrollView;
 @property (weak, nonatomic) IBOutlet UIScrollView *quote_scrollView;

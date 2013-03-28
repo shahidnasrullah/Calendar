@@ -10,6 +10,7 @@
 #import "SmileyListViewController.h"
 #import "AppConstants.h"
 
+
 @implementation CVCalenderView
 
 - (id)initWithFrame:(CGRect)frame
@@ -137,7 +138,7 @@
         
         
         item.lbl_date.text = [NSString stringWithFormat:@"%d",i+1];
-        item.pic_smiley.image =  [UIImage imageNamed:@"images.jpeg"];
+        item.pic_smiley.image =  [UIImage imageNamed:@"default.png"];
         [item addTapGestureRecognizer];
         NSDate * tempDate = [cal dateFromComponents:components];
         NSDate * dateForCurrentItem = [self getCurrentDate: tempDate forDay:i+1];
@@ -229,48 +230,17 @@
 {
     UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Title" message:[NSString stringWithFormat: @"Item Clicked with tag : %d with Date: %@", tag, date] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];
-    itemView.pic_smiley.image = [UIImage imageNamed:@"Default.png"];
+    UIActionSheet * sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:nil cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"View Comments",@"Add Comments", nil];
+    [sheet showFromRect:itemView.frame inView:self animated:YES];
+    
 }
 
 -(void)CVcalenderItemView:(CVCalenderItemView *)itemView didLongPressedWithGesture:(UILongPressGestureRecognizer *)longPressedGesture withDate:(NSDate *)date
 {
-    /*if(!smiliesView)
-    {
-        smiliesView = [[SmiliesView alloc] initWithFrame:CGRectMake(0, self.frame.size.height, 320, 150)];
-        smiliesView.delegate = self;
-        [smiliesView.layer setCornerRadius:10];
-        [smiliesView.layer setBorderColor:[[UIColor blackColor] CGColor]];
-        [self addSubview:smiliesView];
-        [smiliesView.layer setBorderWidth:4];
-    }
-    [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationCurveLinear animations:^{
-        [smiliesView setFrame:CGRectMake(0, self.frame.size.height - 200, 320, 110)];
-    } completion:^(BOOL finished) {
-        
-    }];*/
-    /*SmileyListViewController * smileyListController = [[SmileyListViewController alloc] init];
-    UINavigationController * navController = [[UINavigationController alloc] initWithRootViewController:smileyListController];
-    smileyListController.delegate = self;
-    if(self.viewController)
-    {
-        [(UIViewController*) self.viewController presentViewController:navController animated:YES completion:^{
-            
-        }];
-    }*/
-    
-    if(!smiliesScrollView)
-    {
-        NSArray * nibsArray = [[NSBundle mainBundle] loadNibNamed:@"SmiliesView" owner:nil options:nil];
-        smiliesScrollView = [nibsArray objectAtIndex:0];
-        [smiliesScrollView setFrame:CGRectMake(0, self.frame.size.height, 320, 240)];
-        [smiliesScrollView createPages];
-        [self addSubview:smiliesScrollView];
-    }
-    [UIView animateWithDuration:0.5 animations:^{
-        [smiliesScrollView setFrame:CGRectMake(0, self.frame.size.height - smiliesScrollView.frame.size.height, smiliesScrollView.frame.size.width, smiliesScrollView.frame.size.height + 10)];
-    } completion:^(BOOL finished) {
-        
-    }];
+    selectedView = itemView;
+    customActionSheetView = [[CustomActionSheet alloc] initWithTitle:nil delegate:nil cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:nil, nil];
+    customActionSheetView.m_delegate = self;
+    [customActionSheetView showInView:self];
 }
 
 #pragma mark - SmiliesListViewContrtoller Delegate
@@ -279,6 +249,13 @@
 {
     UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Tittle" message:[NSString stringWithFormat:@"Tag: %@", data] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];
+}
+
+#pragma mark - ActionSheetView Delegate 
+-(void)smiliesClicked:(id)sender
+{
+    selectedView.pic_smiley.image = [UIImage imageNamed:@"images.jpeg"];
+    [customActionSheetView dismissWithClickedButtonIndex:0 animated:YES];
 }
 
 @end

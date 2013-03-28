@@ -101,10 +101,10 @@
     NSArray * nibsArray = [[NSBundle mainBundle] loadNibNamed:@"CVCalendarWeekView" owner:nil options:nil];
     weekView = [nibsArray objectAtIndex:0];
     [self.view addSubview:weekView];
-    [weekView setFrame:CGRectMake(0, 150 , self.view.frame.size.width, 130)];
+    [weekView setFrame:CGRectMake(0, 125 , self.view.frame.size.width, 130)];
+    weekView.delegate = self;
     [weekView createDaysView];
     [weekView createCalenderViewItems:[AppConstants getStartDate]];
-    
 }
 
 
@@ -125,52 +125,19 @@
 
 -(void)CVcalenderItemView:(CVCalenderItemView *)itemView didLongPressedWithGesture:(UILongPressGestureRecognizer *)longPressedGesture withDate:(NSDate *)date
 {
-    /*if(!smiliesView)
-    {
-        smiliesView = [[SmiliesView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height, 320, 150)];
-        smiliesView.delegate = self;
-        [smiliesView.layer setCornerRadius:10];
-        [smiliesView.layer setBorderColor:[[UIColor blackColor] CGColor]];
-        [self.view addSubview:smiliesView];
-        [smiliesView.layer setBorderWidth:4];
-    }
-    [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationCurveLinear animations:^{
-        [smiliesView setFrame:CGRectMake(0, self.view.frame.size.height - 150, 320, 150)];
-    } completion:^(BOOL finished) {
-     
-    }];*/
-    if(smiliesScrollView)
-    {
-        NSArray * nibsArray = [[NSBundle mainBundle] loadNibNamed:@"SmiliesView" owner:nil options:nil];
-        smiliesScrollView = [nibsArray objectAtIndex:0];
-        [smiliesScrollView setFrame:CGRectMake(0, self.view.frame.size.height, 320, smiliesScrollView.frame.size.height)];
-        [self.view addSubview:smiliesScrollView];
-    }
-    [UIView animateWithDuration:0.5 animations:^{
-        [smiliesScrollView setFrame:CGRectMake(0, self.view.frame.size.height - smiliesScrollView.frame.size.height, smiliesScrollView.frame.size.width, smiliesScrollView.frame.size.height)];
-    } completion:^(BOOL finished) {
-        
-    }];
-    
-
-
+    customActionSheetView = [[CustomActionSheet alloc] initWithTitle:nil delegate:nil cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:nil, nil];
+    customActionSheetView.m_delegate = self;
+    [customActionSheetView showInView:self.view];
 }
-
-#pragma mark - SmiliesView Delegate
-
--(void)SmiliesDidClicked:(id)sender withView:(SmiliesView *)view
-{
-    /*if(smiliesView)
-    {
-        [UIView animateWithDuration:0.6 delay:0.0 options:UIViewAnimationCurveLinear animations:^{
-            [smiliesView setFrame:CGRectMake(0, self.view.frame.size.height, 320, 150)];
-        } completion:^(BOOL finished) {
-            
-        }];
-    }*/
-}
-
 
 - (IBAction)btn_monthClicked:(id)sender {
+    
+}
+
+#pragma mark - CustomActionSheet Delegate
+
+-(void)smiliesClicked:(id)sender
+{
+    [customActionSheetView dismissWithClickedButtonIndex:0 animated:YES];
 }
 @end
